@@ -1,0 +1,23 @@
+<template>
+    <div class="slds-grid">
+        <div class="slds-col">
+            <lightning-card title="ToDo Application">
+                <div class="slds-var-p-around_small">
+                    <lightning-input label="Add New Task" placeholder="ENter the task" required="true" message-when-value-missing="Add Task it should not be empty" onchange={inputtaskdetail} name="taskName" class="taskname" value={taskName}></lightning-input>
+                    <lightning-input type="date" name="taskDate" label="Due Date" field-level-help="Default Date is Today" value={taskDate} onchange={inputtaskdetail}  ></lightning-input>
+                </div>
+                <div class="slds-var-p-around_small">
+                    <lightning-button label="Add Task" variant="brand" onclick={addTaskHandler}></lightning-button>
+                    <lightning-button label="Clear" variant="neutral" onclick={clearTaskHandler}></lightning-button>
+                </div>
+            </lightning-card>
+        </div>
+        <div class="slds-col">
+            <lightning-card title="In Progess"></lightning-card>
+        </div>
+        <div class="slds-col">
+            <lightning-card title="Completed"></lightning-card>
+        </div>
+    </div>
+    
+</template>
